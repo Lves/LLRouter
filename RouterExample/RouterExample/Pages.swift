@@ -1,5 +1,5 @@
 //
-//  Screens.swift
+//  Pages.swift
 //  RouterExample
 //
 //  Created by lixingle on 2022/7/12.
@@ -8,32 +8,32 @@
 import SwiftUI
 import LLRouter
 
-enum Screens {
+enum Pages {
     case home
     case secondary
     case third
 }
 
-extension Screens: LLScreenId {
-    var screenName: String {
+extension Pages: LLPageId {
+    var pagenName: String {
         switch self {
         case .home:
-            return HomeScreen.structName
+            return HomePage.structName
         case .secondary:
-            return SecondaryScreen.structName
+            return SecondaryPage.structName
         case .third:
-            return ThirdScreen.structName
+            return ThirdPage.structName
         }
     }
     
     @ViewBuilder var toView: some View {
         switch self {
         case .home:
-            HomeScreen()
+            HomePage()
         case .secondary:
-            SecondaryScreen()
+            SecondaryPage()
         case .third:
-            ThirdScreen()
+            ThirdPage()
         }
     }
 }

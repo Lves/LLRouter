@@ -1,5 +1,5 @@
 //
-//  LLScreenId.swift
+//  LLPageId.swift
 //  LLRouter
 //
 //  Created by lixingle on 2022/7/12.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-/// Id protocol for all the screens
-public protocol LLScreenId {
+/// Id protocol for all the pages
+public protocol LLPageId {
     associatedtype Destination: View
     var toView: Destination { get }
-    var screenName: String { get }
+    var pagenName: String { get }
 }
 
 extension NSNotification {

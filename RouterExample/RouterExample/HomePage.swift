@@ -11,9 +11,9 @@ import LLRouter
 struct HomePage: View {
     var body: some View {
         LLNavigationView {
-            LLScreen(id: Screens.home) { router in
+            LLPage(id: Pages.home) { router in
                 Button("To Secondary") {
-                    router.push(to: Screens.secondary)
+                    router.push(to: Pages.secondary)
                 }
             }
             .navigationBarTitle("Home", displayMode: .inline)
@@ -22,13 +22,12 @@ struct HomePage: View {
 }
 
 
-
 struct SecondaryPage: View {
     var body: some View {
-        LLScreen(id: Screens.secondary) { router in
+        LLPage(id: Pages.secondary) { router in
             VStack {
                 Button("To Third") {
-                    router.push(to: Screens.third)
+                    router.push(to: Pages.third)
                 }
                 
                 Button("Back") {
@@ -40,29 +39,19 @@ struct SecondaryPage: View {
     }
 }
 
-struct ThirdScreen: View {
+struct ThirdPage: View {
     var body: some View {
-        LLScreen(id: Screens.third) { router in
+        LLPage(id: Pages.third) { router in
             VStack {
                 Button("Back to current page") {
                     router.back()
                 }
                 
                 Button("Back to root page") {
-                    router.back(to: Screens.home)
+                    router.back(to: Pages.home)
                 }
             }
         }
         .navigationBarTitle("Third", displayMode: .inline)
-    }
-}
-
-
-
-
-
-struct HomePage_Previews: PreviewProvider {
-    static var previews: some View {
-        HomePage()
     }
 }

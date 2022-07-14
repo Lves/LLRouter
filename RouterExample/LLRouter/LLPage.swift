@@ -1,5 +1,5 @@
 //
-//  LLScreen.swift
+//  LLPage.swift
 //  LLRouter
 //
 //  Created by lixingle on 2022/7/12.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-public struct LLScreen<Content, ScreenId: LLScreenId> : View where Content : View {
+public struct LLPage<Content, PageId: LLPageId> : View where Content : View {
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var screenStack: LLScreenStack
+    @EnvironmentObject var pageStack: LLPageStack
     @StateObservedObject var router: LLRouter = LLRouter()
     
     let content: (LLRouter) -> Content
-    let screenName: String
+    let pagenName: String
     
-    public init(id screenId: ScreenId, @ViewBuilder _ content: @escaping (LLRouter) -> Content) {
-        self.screenName = screenId.screenName
+    public init(id pageId: PageId, @ViewBuilder _ content: @escaping (LLRouter) -> Content) {
+        self.pagenName = pageId.pagenName
         self.content = content
     }
     
@@ -37,13 +37,13 @@ public struct LLScreen<Content, ScreenId: LLScreenId> : View where Content : Vie
             .onReceive(NotificationCenter.default
                         .publisher(for: NSNotification.RouteBackTo)) { (output) in
                 if #available(iOS 15.0, macOS 12.0, *) {
-                    guard let targetName = output.userInfo?[LLRouter.screenNameKey] as? String,
-                          let targetIndex = screenStack.screens.firstIndex(where: {$0 == targetName}),
-                          let index = screenStack.screens.firstIndex(where: {$0 == screenName}),
+                    guard let targetName = output.userInfo?[LLRouter.pageNameKey] as? String,
+                          let targetIndex = pageStack.pages.firstIndex(where: {$0 == targetName}),
+                          let index = pageStack.pages.firstIndex(where: {$0 == pagenName}),
                           index >= targetIndex else { return }
                     router.isActive = false
                 } else {
-                    if output.userInfo?[LLRouter.screenNameKey] as? String == screenName {
+                    if output.userInfo?[LLRouter.pageNameKey] as? String == pagenName {
                         router.isActive = false
                     }
                 }
@@ -53,12 +53,12 @@ public struct LLScreen<Content, ScreenId: LLScreenId> : View where Content : Vie
     
     func onAppear() {
         if #available(iOS 15.0, macOS 12.0, *) {
-            if screenStack.screens.contains(screenName) {
-                guard let index = screenStack.screens.firstIndex(where: {$0 == screenName}) else { return }
-                let startIndex = screenStack.screens.index(index, offsetBy: 1)
-                screenStack.screens.removeSubrange(startIndex..<screenStack.screens.endIndex)
+            if pageStack.pages.contains(pagenName) {
+                guard let index = pageStack.pages.firstIndex(where: {$0 == pagenName}) else { return }
+                let startIndex = pageStack.pages.index(index, offsetBy: 1)
+                pageStack.pages.removeSubrange(startIndex..<pageStack.pages.endIndex)
             } else {
-                screenStack.screens.append(screenName)
+                pageStack.pages.append(pagenName)
             }
         }
     }

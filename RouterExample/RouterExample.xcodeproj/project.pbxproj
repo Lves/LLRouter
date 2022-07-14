@@ -15,15 +15,15 @@
 		6CFCF4C5287D700C00F56852 /* LLRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CFCF4C4287D700C00F56852 /* LLRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6CFCF4C8287D700C00F56852 /* LLRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFCF4C2287D700C00F56852 /* LLRouter.framework */; };
 		6CFCF4C9287D700C00F56852 /* LLRouter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CFCF4C2287D700C00F56852 /* LLRouter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		6CFCF4CF287D708A00F56852 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4CE287D708A00F56852 /* HomeScreen.swift */; };
-		6CFCF4D1287D717D00F56852 /* LLScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4D0287D717D00F56852 /* LLScreen.swift */; };
+		6CFCF4CF287D708A00F56852 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4CE287D708A00F56852 /* HomePage.swift */; };
+		6CFCF4D1287D717D00F56852 /* LLPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4D0287D717D00F56852 /* LLPage.swift */; };
 		6CFCF4D3287D71F800F56852 /* LLRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4D2287D71F800F56852 /* LLRouter.swift */; };
-		6CFCF4D5287D72D300F56852 /* LLScreenId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4D4287D72D300F56852 /* LLScreenId.swift */; };
-		6CFCF4D7287D734400F56852 /* LLScreenStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4D6287D734400F56852 /* LLScreenStack.swift */; };
+		6CFCF4D5287D72D300F56852 /* LLPageId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4D4287D72D300F56852 /* LLPageId.swift */; };
+		6CFCF4D7287D734400F56852 /* LLPageStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4D6287D734400F56852 /* LLPageStack.swift */; };
 		6CFCF4D9287D739900F56852 /* LLNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4D8287D739900F56852 /* LLNavigationView.swift */; };
 		6CFCF4DC287D749800F56852 /* StateObservedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4DB287D749800F56852 /* StateObservedObject.swift */; };
 		6CFCF4DE287D757100F56852 /* LLChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4DD287D757100F56852 /* LLChangeObserver.swift */; };
-		6CFCF4E0287D75E000F56852 /* Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4DF287D75E000F56852 /* Screens.swift */; };
+		6CFCF4E0287D75E000F56852 /* Pages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFCF4DF287D75E000F56852 /* Pages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,15 +60,15 @@
 		6CFCF4B7287D6FAC00F56852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CFCF4C2287D700C00F56852 /* LLRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LLRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CFCF4C4287D700C00F56852 /* LLRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLRouter.h; sourceTree = "<group>"; };
-		6CFCF4CE287D708A00F56852 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		6CFCF4D0287D717D00F56852 /* LLScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLScreen.swift; sourceTree = "<group>"; };
+		6CFCF4CE287D708A00F56852 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		6CFCF4D0287D717D00F56852 /* LLPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLPage.swift; sourceTree = "<group>"; };
 		6CFCF4D2287D71F800F56852 /* LLRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLRouter.swift; sourceTree = "<group>"; };
-		6CFCF4D4287D72D300F56852 /* LLScreenId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLScreenId.swift; sourceTree = "<group>"; };
-		6CFCF4D6287D734400F56852 /* LLScreenStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLScreenStack.swift; sourceTree = "<group>"; };
+		6CFCF4D4287D72D300F56852 /* LLPageId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLPageId.swift; sourceTree = "<group>"; };
+		6CFCF4D6287D734400F56852 /* LLPageStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLPageStack.swift; sourceTree = "<group>"; };
 		6CFCF4D8287D739900F56852 /* LLNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLNavigationView.swift; sourceTree = "<group>"; };
 		6CFCF4DB287D749800F56852 /* StateObservedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateObservedObject.swift; sourceTree = "<group>"; };
 		6CFCF4DD287D757100F56852 /* LLChangeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLChangeObserver.swift; sourceTree = "<group>"; };
-		6CFCF4DF287D75E000F56852 /* Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screens.swift; sourceTree = "<group>"; };
+		6CFCF4DF287D75E000F56852 /* Pages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +113,8 @@
 			children = (
 				6CFCF4A9287D6FA600F56852 /* AppDelegate.swift */,
 				6CFCF4AB287D6FA600F56852 /* SceneDelegate.swift */,
-				6CFCF4CE287D708A00F56852 /* HomeScreen.swift */,
-				6CFCF4DF287D75E000F56852 /* Screens.swift */,
+				6CFCF4CE287D708A00F56852 /* HomePage.swift */,
+				6CFCF4DF287D75E000F56852 /* Pages.swift */,
 				6CFCF4AF287D6FA600F56852 /* Main.storyboard */,
 				6CFCF4B2287D6FAB00F56852 /* Assets.xcassets */,
 				6CFCF4B4287D6FAB00F56852 /* LaunchScreen.storyboard */,
@@ -128,11 +128,11 @@
 			children = (
 				6CFCF4DA287D749800F56852 /* Tools */,
 				6CFCF4C4287D700C00F56852 /* LLRouter.h */,
-				6CFCF4D0287D717D00F56852 /* LLScreen.swift */,
-				6CFCF4D6287D734400F56852 /* LLScreenStack.swift */,
+				6CFCF4D0287D717D00F56852 /* LLPage.swift */,
+				6CFCF4D6287D734400F56852 /* LLPageStack.swift */,
 				6CFCF4D8287D739900F56852 /* LLNavigationView.swift */,
 				6CFCF4D2287D71F800F56852 /* LLRouter.swift */,
-				6CFCF4D4287D72D300F56852 /* LLScreenId.swift */,
+				6CFCF4D4287D72D300F56852 /* LLPageId.swift */,
 			);
 			path = LLRouter;
 			sourceTree = "<group>";
@@ -260,10 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CFCF4CF287D708A00F56852 /* HomeScreen.swift in Sources */,
+				6CFCF4CF287D708A00F56852 /* HomePage.swift in Sources */,
 				6CFCF4AA287D6FA600F56852 /* AppDelegate.swift in Sources */,
 				6CFCF4AC287D6FA600F56852 /* SceneDelegate.swift in Sources */,
-				6CFCF4E0287D75E000F56852 /* Screens.swift in Sources */,
+				6CFCF4E0287D75E000F56852 /* Pages.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,11 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CFCF4DC287D749800F56852 /* StateObservedObject.swift in Sources */,
-				6CFCF4D7287D734400F56852 /* LLScreenStack.swift in Sources */,
+				6CFCF4D7287D734400F56852 /* LLPageStack.swift in Sources */,
 				6CFCF4D3287D71F800F56852 /* LLRouter.swift in Sources */,
-				6CFCF4D5287D72D300F56852 /* LLScreenId.swift in Sources */,
+				6CFCF4D5287D72D300F56852 /* LLPageId.swift in Sources */,
 				6CFCF4D9287D739900F56852 /* LLNavigationView.swift in Sources */,
-				6CFCF4D1287D717D00F56852 /* LLScreen.swift in Sources */,
+				6CFCF4D1287D717D00F56852 /* LLPage.swift in Sources */,
 				6CFCF4DE287D757100F56852 /* LLChangeObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

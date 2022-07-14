@@ -8,14 +8,14 @@
 import SwiftUI
 
 public struct LLNavigationView<Content> : View where Content : View {
-    var screenStack: LLScreenStack
+    var pageStack: LLPageStack
     let content: Content
     
-    public init(screenStack: LLScreenStack? = nil, @ViewBuilder content: () -> Content) {
-        if let screenStack = screenStack {
-            self.screenStack = screenStack
+    public init(pageStack: LLPageStack? = nil, @ViewBuilder content: () -> Content) {
+        if let pageStack = pageStack {
+            self.pageStack = pageStack
         } else {
-            self.screenStack = LLScreenStack()
+            self.pageStack = LLPageStack()
         }
         self.content = content()
     }
@@ -27,6 +27,6 @@ public struct LLNavigationView<Content> : View where Content : View {
         .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarTitle("", displayMode: .inline)
         .navigationBarHidden(true)
-        .environmentObject(screenStack)
+        .environmentObject(pageStack)
     }
 }
